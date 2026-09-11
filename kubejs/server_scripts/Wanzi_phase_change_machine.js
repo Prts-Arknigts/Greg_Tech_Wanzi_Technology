@@ -409,6 +409,7 @@ ServerEvents.recipes((event) => {//万子科技部分
     .duration(80)
     .EUt(256)//B型线路跨域促动器
 
+    // 神化模组兼容 //
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:gem_super_phase')
     .circuit(1)
     .itemInputs('2x apotheosis:gem_dust','4x apotheosis:common_material','prts:basic_wanzi')
@@ -434,6 +435,15 @@ ServerEvents.recipes((event) => {//万子科技部分
     .duration(40)
     .EUt(512)//玄奥砂转化为神铸珍珠
 
+    // 无尽贪婪模组兼容 //
+    event.recipes.gtceu.basic_model_wanzi_phase_change_machine('prts:avaritia_blaze_cube')
+    .circuit(1)
+    .notConsumable('avaritia:blaze_cube')
+    .itemInputs('minecraft:ancient_debris','minecraft:bone_meal')
+    .inputFluids(Fluid.of('gtceu:blaze',2304))
+    .itemOutputs('2x avaritia:blaze_cube')
+    .duration(40)
+    .EUt(512)//批量制取炽骨立方
 function basic_model_wanzi_phase_change_machine(id,C,I,O,T,E){
     event.recipes.gtceu.basic_model_wanzi_phase_change_machine(id)
          .circuit(C)

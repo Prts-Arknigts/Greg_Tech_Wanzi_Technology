@@ -1,18 +1,5 @@
 //tacz official ammo recipes
 ServerEvents.recipes((event) => {
-    const ammoIds = [];
-    event.forEachRecipe({}, (r) => {
-        const id = String(r.getId());
-        if (id.startsWith("tacz:ammo/")) {
-            ammoIds.push(id);
-        }
-    });
-
-    ammoIds.forEach((id) => {
-        event.remove({ id: id });
-        console.info(`Removed ammo recipe: ${id}`);
-    });
-
     //ulv/lv ammo recipes
     event.custom({
         type: "tacz:gun_smith_table_crafting",
@@ -855,26 +842,6 @@ ServerEvents.recipes((event) => {
             id: "tacz:40mm",
             count: 6,
         },
-    });
-});
-
-//ammo recipes for third-party packs
-ServerEvents.recipes((event) => {
-    const ammoIds = [];
-    event.forEachRecipe({}, (r) => {
-        const id = String(r.getId());
-        if (
-            id.startsWith("helldiver2:ammo/") ||
-            id.startsWith("create_armorer:ammo/") ||
-            id.startsWith("immersive_armorer:ammo/")
-        ) {
-            ammoIds.push(id);
-        }
-    });
-
-    ammoIds.forEach((id) => {
-        event.remove({ id: id });
-        console.info(`Removed ammo recipe: ${id}`);
     });
 
     //Helldiver2 AMMO recipes

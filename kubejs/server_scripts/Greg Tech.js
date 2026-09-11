@@ -1,4 +1,33 @@
 ServerEvents.recipes(event => {
+     // minecraft原版锭对应的材料（不统一，保持 minecraft:xxx_ingot）
+     const MC_INGOT_MATERIALS = ['iron', 'gold', 'copper', 'netherite'];
+     //粉尘物品ID->GTCEu锭映射
+     const dustToIngot = {};
+ 
+     Ingredient.of('#forge:dusts').getStacks().forEach(stack => {
+         const dustId = String(stack.id);// 提取材料名：<mod>:<material>_dust
+         const m = dustId.match(/^([a-z0-9_]+):([a-z0-9_]+)_dust$/);
+         if (!m) return;
+         const material = m[2];
+         if (MC_INGOT_MATERIALS.includes(material)) return; //minecraft锭除外
+         const ingotId = 'gtceu:' + material + '_ingot';
+         if (!Item.exists(ingotId)) return; //GTCEu 无此锭（宝石/非金属粉尘等→跳过
+         dustToIngot[dustId] = ingotId;
+     });
+ 
+     //把该粉尘→任意锭的熔炉/高炉配方输出替换为GTCEu锭
+     for (const recipeType of ['minecraft:smelting', 'minecraft:blasting']) {
+         for (const dustId in dustToIngot) {
+             event.replaceOutput(
+                 { type: recipeType, input: dustId, output: '#forge:ingots' },
+                 '#forge:ingots',
+                 dustToIngot[dustId]
+             );
+         }
+     }
+ 
+    /* console.log('[粉尘统一] ' + Object.keys(dustToIngot).length + ' 种粉尘的熔炼/高炉输出统一为 GTCEu 锭');*/
+    
     event.recipes.gtceu.chemical_reactor('ae2:sky_dust')           
     .itemInputs('ae2:sky_dust','gtceu:stone_dust')
     .inputFluids(Fluid.of('gtceu:steel', 144))
