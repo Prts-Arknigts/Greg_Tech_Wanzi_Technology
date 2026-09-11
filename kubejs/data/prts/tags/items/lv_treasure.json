@@ -1,0 +1,14 @@
+{
+    "replace": false,
+    "values": [
+        "gtceu:lv_conveyor_module",
+        "gtceu:lv_electric_motor",
+        "gtceu:lv_robot_arm",
+        "gtceu:lv_electric_piston",
+        "gtceu:lv_electric_pump",
+        "gtceu:lv_field_generator",
+        "gtceu:lv_sensor",
+        "gtceu:lv_emitter",
+        "prts:low_voltage_wanzi_circuit"
+    ]
+}

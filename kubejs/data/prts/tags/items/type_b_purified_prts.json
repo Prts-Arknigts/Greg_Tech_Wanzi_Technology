@@ -1,0 +1,14 @@
+{
+    "replace": false,
+    "values": [
+        "prts:type_b_purified_conductive_circuit",
+        "prts:type_b_purified_resistor",
+        "prts:type_b_purified_packaging_unit",
+        "prts:type_b_purified_circuit_cross_domain_actuator",
+        "prts:type_b_purified_high_voltage_transformation_component",
+        "prts:type_b_purified_risk_management_unit",
+        "prts:purified_type_two_wanzi",
+        "prts:component_module",
+        "prts:medium_voltage_wanzi_circuit"
+    ]
+}

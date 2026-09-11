@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "prts:type_c_conductive_circuit",
+        "prts:type_c_resistor",
+        "prts:type_c_packaging_unit",
+        "prts:type_c_circuit_cross_domain_actuator",
+        "prts:type_c_high_voltage_transformation_component",
+        "prts:type_c_risk_management_unit",
+        "prts:type_one_wanzi",
+        "prts:component_module"
+    ]
+}
