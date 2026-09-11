@@ -1,9 +1,0 @@
-{
-    "replace": false,
-    "values": [
-        "minecraft:emerald",
-        "gtceu:emerald_plate",
-        "mekanism:dust_emerald",
-        "gtceu:emerald_dust"
-    ]
-}
