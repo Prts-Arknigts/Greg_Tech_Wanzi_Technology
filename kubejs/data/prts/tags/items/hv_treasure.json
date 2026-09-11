@@ -1,0 +1,16 @@
+{
+    "replace": false,
+    "values": [
+        "gtceu:hv_conveyor_module",
+        "gtceu:hv_electric_motor",
+        "gtceu:hv_robot_arm",
+        "gtceu:hv_electric_piston",
+        "gtceu:hv_electric_pump",
+        "gtceu:hv_field_generator",
+        "gtceu:hv_sensor",
+        "gtceu:hv_emitter",
+        "prts:high_voltage_wanzi_circuit",
+        "prts:medium_voltage_wanzi_circuit",
+        "prts:low_voltage_wanzi_circuit"
+    ]
+}
