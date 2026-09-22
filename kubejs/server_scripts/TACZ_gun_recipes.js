@@ -2293,6 +2293,319 @@ ServerEvents.recipes((event) => {
             id: "tacz:minigun",
         },
     });
+    //tacz 1.1.8 weapon recipes
+    let ComparableVersion = Java.loadClass(
+        "org.apache.maven.artifact.versioning.ComparableVersion",
+    );
+    let taczVerStr = Platform.getInfo("tacz").getVersion();
+    let current = new ComparableVersion(taczVerStr);
+    let target = new ComparableVersion("1.1.8");
+    let cmp = current.compareTo(target);
+    if (cmp >= 0) {
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:rods/long/steel",
+                    },
+                    count: 6,
+                },
+                {
+                    item: {
+                        tag: "forge:springs/steel",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:double_plates/steel",
+                    },
+                    count: 6,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/steel",
+                    },
+                    count: 5,
+                },
+                {
+                    item: {
+                        tag: "forge:rounds/iron",
+                    },
+                    count: 4,
+                },
+                {
+                    item: {
+                        tag: "forge:small_gears/steel",
+                    },
+                    count: 2,
+                },
+                {
+                    item: {
+                        tag: "forge:plates/treated_wood",
+                    },
+                    count: 4,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:kar98",
+            },
+        });
+
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:double_plates/steel",
+                    },
+                    count: 9,
+                },
+                {
+                    item: {
+                        tag: "forge:plates/treated_wood",
+                    },
+                    count: 4,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/steel",
+                    },
+                    count: 3,
+                },
+                {
+                    item: {
+                        tag: "forge:rods/steel",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:small_gears/steel",
+                    },
+                    count: 2,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:taurus943",
+            },
+        });
+
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:rods/long/steel",
+                    },
+                    count: 2,
+                },
+                {
+                    item: {
+                        tag: "forge:springs/steel",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:double_plates/steel",
+                    },
+                    count: 3,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/steel",
+                    },
+                    count: 4,
+                },
+                {
+                    item: {
+                        tag: "forge:rounds/iron",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:small_gears/steel",
+                    },
+                    count: 2,
+                },
+                {
+                    item: {
+                        tag: "forge:rods/steel",
+                    },
+                    count: 1,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:lonetrail",
+            },
+        });
+
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:double_plates/black_steel",
+                    },
+                    count: 5,
+                },
+                {
+                    item: {
+                        tag: "forge:plates/rubber",
+                    },
+                    count: 4,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/vanadium_steel",
+                    },
+                    count: 4,
+                },
+                {
+                    item: {
+                        tag: "forge:rods/vanadium_steel",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:small_springs/steel",
+                    },
+                    count: 2,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:hk_mk23",
+            },
+        });
+
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:double_plates/black_steel",
+                    },
+                    count: 9,
+                },
+                {
+                    item: {
+                        tag: "forge:plates/treated_wood",
+                    },
+                    count: 2,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/vanadium_steel",
+                    },
+                    count: 3,
+                },
+                {
+                    item: {
+                        tag: "forge:rods/vanadium_steel",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:small_gears/steel",
+                    },
+                    count: 2,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:rhino357",
+            },
+        });
+
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:double_plates/steel",
+                    },
+                    count: 10,
+                },
+                {
+                    item: {
+                        tag: "forge:plates/rubber",
+                    },
+                    count: 8,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/steel",
+                    },
+                    count: 4,
+                },
+                {
+                    item: {
+                        tag: "forge:rods/vanadium_steel",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:small_springs/steel",
+                    },
+                    count: 2,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:m9a4",
+            },
+        });
+
+        event.custom({
+            type: "tacz:gun_smith_table_crafting",
+            materials: [
+                {
+                    item: {
+                        tag: "forge:double_plates/hssg",
+                    },
+                    count: 9,
+                },
+                {
+                    item: {
+                        tag: "forge:plates/polycaprolactam",
+                    },
+                    count: 2,
+                },
+                {
+                    item: {
+                        tag: "forge:bolts/hssg",
+                    },
+                    count: 3,
+                },
+                {
+                    item: {
+                        tag: "forge:rods/hssg",
+                    },
+                    count: 1,
+                },
+                {
+                    item: {
+                        tag: "forge:small_gears/hssg",
+                    },
+                    count: 2,
+                },
+            ],
+            result: {
+                type: "gun",
+                id: "tacz:taurus500",
+            },
+        });
+    }
 });
 
 //helldiver2 pack recipes
